@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-display {
+  font-family: "Oswald", sans-serif;
+}
+
+.font-body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-1 {
+  animation: heroFadeUp 0.7s ease-out both;
+}
+.animate-hero-2 {
+  animation: heroFadeUp 0.7s ease-out 0.12s both;
+}
+.animate-hero-3 {
+  animation: heroFadeUp 0.7s ease-out 0.24s both;
+}
+.animate-hero-4 {
+  animation: heroFadeUp 0.7s ease-out 0.36s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-hero-1,
+  .animate-hero-2,
+  .animate-hero-3,
+  .animate-hero-4 {
+    animation: none;
+  }
+}
+
+*:focus-visible {
+  outline: 2px solid #E9C46A;
+  outline-offset: 2px;
+}
